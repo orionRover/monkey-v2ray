@@ -1,2 +1,4 @@
 .idea
 /docker-compose.local.yml
+/multi-v2ray.config.local.json
+/haproxy.local.cfg
