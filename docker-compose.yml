@@ -8,8 +8,9 @@ services:
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
     ports:
-      - "444:443"
+      - "10443:443"
     networks:
+      - default
       - web-frontend
 
   multi-v2ray:
