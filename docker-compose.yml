@@ -1,0 +1,20 @@
+version: '3'
+networks:
+  web-frontend:
+    external: true
+services:
+  haproxy:
+    image: haproxy:lts-alpine
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    ports:
+      - "444:443"
+    networks:
+      - web-frontend
+
+  multi-v2ray:
+    image: jrohy/v2ray:latest
+    volumes:
+      - ./multi-v2ray.config.json:/etc/v2ray/config.json
+    expose:
+      - 443
