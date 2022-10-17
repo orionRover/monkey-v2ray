@@ -18,4 +18,4 @@ services:
     volumes:
       - ./multi-v2ray.config.json:/etc/v2ray/config.json
     expose:
-      - 443
+      - 10443
